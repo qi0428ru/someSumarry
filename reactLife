@@ -1,0 +1,91 @@
+import React from 'react';
+
+/*
+getInitialState():获取每个实例的初始化状态；
+使用此方法必须使用React.createClass的方式创建组件可用；
+使用class xxx extends Component的方式报错。
+this.state与props的区别在于：this.state只存在于组件内部，不是组件共享的
+*/
+/*
+支持的鼠标事件
+onClick onContextMenu onDoubleClick onDrag onDragEnd 
+onDragEnter onDragExit onDragLeave onDragOver onDragStart 
+onDrop onMouseDown onMouseEnter onMouseLeave
+onMouseMove onMouseOut onMouseOver onMouseUp
+*/
+
+var TestCom = React.createClass({
+/********************生命周期：初始化期********************************/
+   //1.创建阶段：
+   getDefaultProps() {
+      console.log('getDefaultProps');
+      return {};
+   },
+   //2.实例化阶段
+   getInitialState() {
+      console.log('getInitialState');
+      return {
+         number: 1,
+         array: []
+      }
+   },
+   //render之前调用，业务逻辑都应该放在这里，如对state的操作等
+   componentWillMount(){
+      console.log("componentWillMount");
+   },
+   //渲染并返回一个虚拟DOM
+   render() {
+      console.log('render')
+      return (
+         <div>
+            <input onChange={this.changeInput}/>
+            <button onMouseOver={this.changeNum}>Hello, {this.state.array}</button>
+         </div>
+      )
+   },
+   //该方法发生在render方法之后。在该方法中，ReactJS会使用render生成返回的虚拟DOM对象来创建真实的DOM结构
+   componentDidMount() {
+      console.log("componentDidMount");
+   },
+   changeNum() {
+      this.setState({
+         number: this.state.number+1,
+         array: [...this.state.array, this.state.number]
+      })
+   },
+   changeInput(evt) {
+      console.log(evt.target.value);
+      console.log(this.state.number+evt.target.value)
+      this.setState({
+         number: this.state.number,
+         array: [...this.state.array, this.state.number, evt.target.value]
+      })
+   },
+/*****************存在期****************************/
+   //3.更新阶段
+   componentWillReceiveProps() {
+      console.log('componentWillReceiveProps');
+   },
+   //4.是否需要更新
+   shouldComponentUpdate() {
+      console.log("shouldComponentUpdate");
+      return true;
+   },
+   //5.将要更新
+   componentWillUpdate() {
+      console.log("componentWillUpdate");
+   },
+
+    //6.更新完毕
+   componentDidUpdate:function() {
+      console.log("componentDidUpdate");
+   },
+
+    //7.销毁阶段
+   componentWillUnmount:function() {
+      console.log("componentWillUnmount");
+   }
+});
+
+
+export default TestCom;
