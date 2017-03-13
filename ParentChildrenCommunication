@@ -1,0 +1,33 @@
+//react中子组件与子组件通信时，需要父组件作为桥梁来为子组件传递数据（List组件与UserAdd组件间的通信）
+//父组件：
+setChildrenMsg(array){
+      //console.log(array)
+      this.setState({
+         array: array
+      })
+   }
+   render(){
+      console.log(this.state.array);
+      return (
+         <div>
+            <Header />
+            <List array={this.state.array}/>
+            <Operation/>
+            <UserAdd setChildrenMsg={(array)=>{this.setChildrenMsg(array)}}/>
+            <ReactLife />
+         </div>
+      )
+   }
+//数据改变的子组件UserAdd
+this.props.setChildrenMsg(this.state);
+//根据数据改变渲染的子组件List
+componentWillReceiveProps(){
+      setTimeout(()=>{
+         //通过UserAdd组件传给父组件的数据再传给List组件，从而改变列表数据
+         console.log(this.props.array)
+         this.setState({
+            array: [...this.state.array, this.props.array]
+         })
+      }, 1000)
+      
+   }
