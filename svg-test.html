@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SVG Sprite使用</title>
+</head>
+
+<body>
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="27.325" y1="23.979" x2="27.325" y2="62">
+                    <stop offset="0" stop-color="#00ffba" />
+                    <stop offset=".158" stop-color="#04f0be" />
+                    <stop offset=".422" stop-color="#08dec3" />
+                    <stop offset=".698" stop-color="#0bd3c6" />
+                    <stop offset="1" stop-color="#0ccfc7" />
+                </linearGradient>
+                <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="57.974" y1="23.979" x2="57.974" y2="62">
+                    <stop offset="0" stop-color="#e4f400" />
+                    <stop offset=".155" stop-color="#caf000" />
+                    <stop offset=".352" stop-color="#b0ed00" />
+                    <stop offset=".556" stop-color="#9eea00" />
+                    <stop offset=".768" stop-color="#93e900" />
+                    <stop offset="1" stop-color="#8fe800" />
+                </linearGradient>
+                <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="42.649" y1="27.963" x2="42.649" y2="58.016">
+                    <stop offset="0" stop-color="#0eaad9" />
+                    <stop offset=".384" stop-color="#346be7" />
+                    <stop offset="1" stop-color="#7600ff" />
+                    <stop offset="1" stop-color="#780fef" />
+                    <stop offset="1" stop-color="#7d41b7" />
+                    <stop offset="1" stop-color="#826e86" />
+                    <stop offset="1" stop-color="#86935d" />
+                    <stop offset="1" stop-color="#89b23b" />
+                    <stop offset="1" stop-color="#8cca21" />
+                    <stop offset="1" stop-color="#8edb0f" />
+                    <stop offset="1" stop-color="#8fe504" />
+                    <stop offset="1" stop-color="#8fe800" />
+                </linearGradient>
+            <symbol id="logo" viewBox="0 0 86 86">
+                
+                <path fill="url(#a)" d="M35.3 43c0-6.1 2.9-11.5 7.4-15-3.2-2.5-7.3-4-11.6-4-10.5 0-19 8.5-19 19s8.5 19 19 19c4.4 0 8.4-1.5 11.6-4-4.5-3.5-7.4-8.9-7.4-15z"
+                />
+                
+                <path fill="url(#b)" d="M54.3 24c-4.4 0-8.4 1.5-11.6 4 4.5 3.5 7.4 8.9 7.4 15s-2.9 11.5-7.4 15c3.2 2.5 7.3 4 11.6 4 10.5 0 19-8.5 19-19s-8.5-19-19-19z"
+                />
+                
+                <path fill="url(#c)" d="M42.6 28c-4.5 3.5-7.4 8.9-7.4 15s2.9 11.5 7.4 15c4.5-3.5 7.4-8.9 7.4-15s-2.9-11.6-7.4-15zm4.6 16.5l-3.6 2.2v6.2c0 .5-.4 1-1 1s-1-.4-1-1v-6.1L38 44.9c-.5-.3-.7-.9-.4-1.3.3-.5.9-.7 1.3-.4l2.6 1.4v-4.7L38 38c-.5-.3-.7-.9-.4-1.3.3-.5.9-.7 1.3-.4l2.6 1.4v-5.1c0-.5.4-1 1-1s1 .4 1 1v5L46 36c.5-.3 1.1-.1 1.4.3.3.5.1 1.1-.3 1.4l-3.6 2.2v4.6l2.5-1.6c.5-.3 1.1-.1 1.4.3.4.4.3 1-.2 1.3z"
+                />
+            </symbol>
+            <symbol id="leavel">
+
+                <!-- <linearGradient x1="100%" y1="50%" x2="7.49729044%" y2="50%" id="a">
+                    <stop stop-color="#EF31C4" offset="0%"/>
+                    <stop stop-color="#E98119" offset="100%"/>
+                </linearGradient>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M8 0h16a7 7 0 1 1 0 14H8A7 7 0 1 1 8 0" fill="url(#a)"/>
+                    <path d="M.113.286c2.13-.4 7.507.056 10.2 3.363 2.691 3.307 1.935 6.712-.659 8.871-2.594 2.16-6.18 1.96-8.61-1.549C-1.643 7.092 1.932 3.414.113.286" fill="#FFBEB1" mask="url(#mask-3)"/>
+                    <path d="M7.464 9.88c.09-.314-.07-.627-.361-.698l-2.984-.527c-.291-.07-.6.127-.691.442-.091.315.07.628.36.699l2.985.527c.29.07.6-.127.69-.442" fill="#EB694C" mask="url(#mask-3)"/>
+                    <path d="M4.701 5.771a.555.555 0 0 1 .764.207l4.19 7.34a.568.568 0 0 1-.204.771.555.555 0 0 1-.764-.207l-4.19-7.339a.568.568 0 0 1 .204-.772" fill="#EB694C" mask="url(#mask-3)"/>
+                    <path d="M8.27 5.978c.299.08.476.39.396.692l-.984 2.992a.558.558 0 1 1-1.08-.292l.984-2.993a.559.559 0 0 1 .685-.4" fill="#EB694C" mask="url(#mask-3)"/>
+                </g> -->
+            </symbol>
+            <!-- <symbol id="svg-room-level-0" viewBox="0 0 31 14"><title>&#x53F6;&#x5B50;-&#x84DD;</title><g fill="none" fill-rule="evenodd"><path d="M8 0h16a7 7 0 1 1 0 14H8A7 7 0 1 1 8 0" fill="#18DDFA"/><path d="M.112.286c2.117-.4 7.463.056 10.14 3.363 2.676 3.307 1.924 6.712-.655 8.871-2.579 2.16-6.144 1.96-8.56-1.549-2.67-3.879.884-7.557-.925-10.685" fill="#8FF3FF" mask="url(#s9809)"/><path d="M7.42 9.88c.09-.314-.07-.627-.36-.698l-2.966-.527c-.289-.07-.596.127-.687.442-.09.315.07.628.359.699l2.967.527c.288.07.596-.127.686-.442" fill="#18DDFA" mask="url(#s9809)"/><path d="M4.673 5.771a.55.55 0 0 1 .76.207l4.165 7.34a.57.57 0 0 1-.203.771.55.55 0 0 1-.76-.207L4.47 6.543a.57.57 0 0 1 .203-.772" fill="#18DDFA" mask="url(#s9809)"/><path d="M8.222 5.978c.296.08.472.39.392.692l-.978 2.992a.555.555 0 0 1-.68.4.566.566 0 0 1-.393-.692l.978-2.993a.555.555 0 0 1 .68-.4" fill="#18DDFA" mask="url(#s9809)"/></g></symbol>
+            <symbol id="blue">
+                <title>叶子-蓝</title><defs><path id="a" d="M.002.165H11.93v13.757H.002z"/></defs><g fill="none" fill-rule="evenodd"><path d="M8 0h16a7 7 0 1 1 0 14H8A7 7 0 1 1 8 0" fill="#18DDFA"/><path d="M.112.286c2.117-.4 7.463.056 10.14 3.363 2.676 3.307 1.924 6.712-.655 8.871-2.579 2.16-6.144 1.96-8.56-1.549-2.67-3.879.884-7.557-.925-10.685" fill="#8FF3FF" mask="url(#b)"/><path d="M7.42 9.88c.09-.314-.07-.627-.36-.698l-2.966-.527c-.289-.07-.596.127-.687.442-.09.315.07.628.359.699l2.967.527c.288.07.596-.127.686-.442" fill="#18DDFA" mask="url(#b)"/><path d="M4.673 5.771a.55.55 0 0 1 .76.207l4.165 7.34a.57.57 0 0 1-.203.771.55.55 0 0 1-.76-.207L4.47 6.543a.57.57 0 0 1 .203-.772" fill="#18DDFA" mask="url(#b)"/><path d="M8.222 5.978c.296.08.472.39.392.692l-.978 2.992a.555.555 0 0 1-.68.4.566.566 0 0 1-.393-.692l.978-2.993a.555.555 0 0 1 .68-.4" fill="#18DDFA" mask="url(#b)"/></g>
+            
+            </symbol> -->
+            <symbol id="youtube" viewBox="0 0 400 281.641">
+                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="200.4204" y1="2.6162" x2="200.4204" y2="278.9292">
+                        <stop  offset="0" style="stop-color:#E52D27"/>
+                        <stop  offset="1" style="stop-color:#BF171D"/>
+                    </linearGradient>
+                <path id="Triangle" fill="#FFFFFF" d="M159.845,191.73l106.152-54.999L159.845,81.348V191.73z"/>
+                <path id="The_Sharpness" opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" fill="#420000" d="M159.845,81.348l93.091,62.162
+      l13.061-6.778L159.845,81.348z"/>
+                <g id="Lozenge">
+                    <g>
+                        <path fill="url(#SVGID_1_)" d="M392.928,62.226c0,0-3.839-27.073-15.617-38.995C362.371,7.583,345.626,7.506,337.947,6.59
+                        c-54.975-3.974-137.441-3.974-137.441-3.974h-0.171c0,0-82.464,0-137.44,3.974c-7.68,0.916-24.419,0.993-39.364,16.641
+                        C11.753,35.153,7.92,62.226,7.92,62.226s-3.929,31.792-3.929,63.583v29.805c0,31.791,3.929,63.582,3.929,63.582
+                        s3.833,27.073,15.611,38.995c14.945,15.646,34.575,15.152,43.318,16.792c31.43,3.015,133.571,3.946,133.571,3.946
+                        s82.552-0.124,137.526-4.099c7.679-0.915,24.424-0.993,39.363-16.64c11.778-11.922,15.617-38.995,15.617-38.995
+                        s3.923-31.791,3.923-63.582v-29.805C396.851,94.017,392.928,62.226,392.928,62.226z M159.863,191.73l-0.018-110.383
+                        l106.152,55.384L159.863,191.73z"/>
+                    </g>
+                </g>
+            </symbol>
+
+        </svg>
+    </div>
+
+
+    <svg>
+        <use xlink:href="#logo"></use>
+    </svg>
+    <svg>
+        <use xlink:href="#youtube"></use>
+    </svg>
+    <!-- <svg>
+        <use xlink:href="#leavel"></use>
+    </svg>
+    
+    <svg>
+        <use xlink:href="#svg-room-level-0"></use>
+    </svg>
+    
+    <svg>
+        <use xlink:href="#blue"></use>
+    </svg> -->
+
+</body>
+
+</html>
